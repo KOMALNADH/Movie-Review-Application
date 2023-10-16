@@ -1,0 +1,73 @@
+body {
+    background: url(https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?size=626&ext=jpg&ga=GA1.2.2008743219.1686029620&semt=ais);
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 2px;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+
+
+li a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: right;
+  padding-right: 15px;
+  text-decoration: none;
+  
+}
+li h2 {
+  float: left;
+  display: block;
+  text-align: left;
+  color: white;
+  padding-left : 15px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+h3{
+	text-align: center;
+	color:white;
+}
+.rating1{
+	color:white;
+}
+.rating {
+    direction: rtl; /* Reverse the order of stars */
+    unicode-bidi: bidi-override; /* Adjust for RTL text */
+  }
+
+  .rating input {
+    display: none; /* Hide the radio inputs */
+  }
+
+  .rating label {
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-image: url('star.png'); /* Replace with your star image */
+    background-size: cover;
+  }
+
+  .rating label::before {
+    content: "\2606"; /* Unicode character for an empty star */
+    position: absolute;
+  }
+
+  .rating label:hover::before,
+  .rating label:hover ~ label::before,
+  .rating input:checked ~ label::before {
+    content: "\2605"; /* Unicode character for a filled star */
+  }
